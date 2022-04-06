@@ -1,0 +1,80 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React CDN</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">
+        <script>
+            ReactDOM.render(React.createElement("h1", null, "ReactDOM CDN"), 
+            document.getElementById("root"));
+        </script>
+
+        <!-- babel crear clase react manera vieja-->
+        <script type="text/babel">
+
+            class Saludo extends React.Component{
+                render(){
+                    return(
+                        <h1>React- Manera Vieja</h1>
+                    )
+                }
+            }
+            ReactDOM.render(<Saludo />,document.getElementById("root")
+            );  
+        </script>
+
+        <!-- babel crear clase reactmanera nueva-->
+        <script type="text/babel">
+            const Saludos =()=>{
+                return <h1>React Manera Nueva</h1>
+            }
+            ReactDOM.render(<Saludos />,document.getElementById("root")
+            );  
+        </script>
+
+         <!-- Interpolar Variables-->
+         <script type="text/babel">
+            const Interpolar = () => {
+                const nombre = prompt("Cual es su nombre");
+                return (
+                    <div>
+                        <h1>Interpolacion {nombre}</h1>
+                        <h1>Dia {new Date().getDay()}</h1>
+                        <hr />
+                    </div>
+                );
+            };
+            ReactDOM.render(<Interpolar />,document.getElementById("root")
+            );  
+        </script>
+
+         <!-- Estados-->
+         <script type="text/babel">
+            const Estados = () => {
+                const [numero, setNumero] = React.useState(0);
+
+                // setEstados(()=>{
+                //     setNumero(numero +1);
+                // }, 150);
+
+                return (
+                    <div>
+                        <h1>Estado</h1>
+                        <hr />
+                    </div>
+                );
+            };
+            ReactDOM.render(<Estados />,document.getElementById("root")
+            );  
+        </script>
+
+    </div>
+    
+</body>
+</html>
