@@ -14,10 +14,10 @@ export default defineConfig({
       lang: "es",
       icons: [
         {
-          src: "./assets/favicon.svg",
-          sizes: "64x64",
+          src: "./assets/logo.svg",
+          sizes: "410x404",
           type: "image/svg+xml",
-          purpose: "maskable",
+          purpose: "any",
         }
       ]
     }
