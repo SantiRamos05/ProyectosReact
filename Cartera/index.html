@@ -4,8 +4,351 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Facebook Clone</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="./css/normailze.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <meta name="theme-color" content="#2091f9" />
+    <meta name="title" content="Santiago Ramos" />
   </head>
-  <body></body>
+  <body>
+    <!------HEADER------>
+    <header class="hero">
+      <nav class="nav container">
+        <div class="nav__logo">
+          <h2 class="nav__title">Santiago Ramos</h2>
+        </div>
+        <ul class="nav__link nav__link--menu">
+          <li class="nav__items">
+            <a href="" class="nav__links">Inicio</a>
+          </li>
+          <li class="nav__items">
+            <a href="" class="nav__links">Acerca de</a>
+          </li>
+          <li class="nav__items">
+            <a href="" class="nav__links">Contacto</a>
+          </li>
+          <li class="nav__items">
+            <a href="" class="nav__links">Blog</a>
+          </li>
+          <img src="./images/close.svg" class="nav__close" />
+        </ul>
+
+        <div class="nav__menu">
+          <img src="./images/menu.svg" alt="" class="nav__img" />
+        </div>
+      </nav>
+      <section class="hero__container container">
+        <h1 class="hero__title">Software Developer</h1>
+        <p class="hero__paragraph">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. It has survived not only five centuries
+        </p>
+        <a href="" class="cta">Saber Mas</a>
+      </section>
+    </header>
+
+    <!-----CONTENIDO------>
+    <main>
+      <section class="container about">
+        <h2 class="subtitle">Proyecto Desarrollados</h2>
+        <p class="about__paragraph">
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It
+          has roots in a piece of classical Latin literature from 45
+        </p>
+        <div class="about__main">
+          <article class="about__icons">
+            <img src="./images/shapes.svg" class="about__icon" />
+            <h3 class="about__title">Estudios</h3>
+            <p class="about__paragraph">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour, or randomised words which don't look even
+              slightly believable.
+            </p>
+          </article>
+
+          <article class="about__icons">
+            <img src="./images/code.svg" class="about__icon" />
+            <h3 class="about__title">Proyectos</h3>
+            <p class="about__paragraph">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour, or randomised words which don't look even
+              slightly believable.
+            </p>
+          </article>
+
+          <article class="about__icons">
+            <img src="./images/paint.svg" class="about__icon" />
+            <h3 class="about__title">Experiencia</h3>
+            <p class="about__paragraph">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour, or randomised words which don't look even
+              slightly believable.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!------LAST PROYECT------->
+      <section class="knowledge">
+        <div class="knowledge__container container">
+          <div class="knowledge__texts">
+            <h2 class="subtitle">
+              Ultimos proyecto realizados. ¡Estas Interesado!
+            </h2>
+            <p class="knowledge__paragraph">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour, or randomised words which don't look even
+              slightly believable. If you are going to use a passage of Lorem
+              Ipsum, you need to be sure
+            </p>
+            <a href="" class="cta">Ver</a>
+          </div>
+          <figure class="knowledge__picture">
+            <img src="./images/dev.jpg" alt="" class="knowledge__img" />
+          </figure>
+        </div>
+      </section>
+
+      <!---- PRECIOS---->
+      <section class="price container">
+        <h2 class="subtitle">Obten el paln perfecto</h2>
+        <div class="price__table">
+          <div class="price__element">
+            <p class="price__name">Flexbox</p>
+            <h3 class="price__price">Free</h3>
+            <div class="price__items">
+              <p class="price__features">Flexbox</p>
+              <p class="price__features">Layaout</p>
+              <p class="price__features">Responsive</p>
+            </div>
+            <a href="" class="price_cta">Empieza Ahora</a>
+          </div>
+
+          <div class="price__element price__element--best">
+            <p class="price__name">Grid</p>
+            <h3 class="price__price">$30/mes</h3>
+            <div class="price__items">
+              <p class="price__features">Grid</p>
+              <p class="price__features">Layaout</p>
+              <p class="price__features">Responsive</p>
+            </div>
+            <a href="" class="price_cta">Empieza Ahora</a>
+          </div>
+
+          <div class="price__element">
+            <p class="price__name">Animaciones</p>
+            <h3 class="price__price">$5/mes</h3>
+            <div class="price__items">
+              <p class="price__features">Animacion</p>
+              <p class="price__features">Transition</p>
+              <p class="price__features">Responsive</p>
+            </div>
+            <a href="" class="price_cta">Empieza Ahora</a>
+          </div>
+        </div>
+      </section>
+      <section class="testimonio">
+        <div class="testimonio__container container">
+          <img
+            src="./images/leftarrow.svg"
+            class="testimonio__arrow"
+            id="before"
+          />
+
+          <!----SLIDER----->
+
+          <section class="testimonio__body testimonio__body--show" data-id="1">
+            <div class="testimonio__text">
+              <h2 class="subtitle">
+                GitHub Page,
+                <span class="testimonio__course">Repositorio Publico</span>
+              </h2>
+              <p class="testimonio__review">
+                Contrary to popular belief, Lorem Ipsum is not simply random
+                text. It has roots in a piece of classical Latin literature from
+                45 BC, making it over 2000 years old. Richard McClintock, a
+                Latin professor at Hampden
+              </p>
+            </div>
+            <figure class="testimonio__picture">
+              <img src="./images/git.jpg" class="testimonio__img" />
+            </figure>
+          </section>
+
+          <section class="testimonio__body" data-id="2">
+            <div class="testimonio__text">
+              <h2 class="subtitle">
+                Linkedin,
+                <span class="testimonio__course">Repositorio Publico</span>
+              </h2>
+              <p class="testimonio__review">
+                Contrary to popular belief, Lorem Ipsum is not simply random
+                text. It has roots in a piece of classical Latin literature from
+                45 BC, making it over 2000 years old. Richard McClintock, a
+                Latin professor at Hampden
+              </p>
+            </div>
+            <figure class="testimonio__picture">
+              <img src="./images/link.jpg" class="testimonio__img" />
+            </figure>
+          </section>
+
+          <section class="testimonio__body" data-id="3">
+            <div class="testimonio__text">
+              <h2 class="subtitle">
+                Facebook Page,
+                <span class="testimonio__course">Repositorio Publico</span>
+              </h2>
+              <p class="testimonio__review">
+                Contrary to popular belief, Lorem Ipsum is not simply random
+                text. It has roots in a piece of classical Latin literature from
+                45 BC, making it over 2000 years old. Richard McClintock, a
+                Latin professor at Hampden
+              </p>
+            </div>
+            <figure class="testimonio__picture">
+              <img src="./images/face.jpg" class="testimonio__img" />
+            </figure>
+          </section>
+
+          <img
+            src="./images/rightarrow.svg"
+            class="testimonio__arrow"
+            id="next"
+          />
+        </div>
+      </section>
+
+      <!----PREGUNTAS----->
+      <section class="questions container">
+        <h2 class="subtitle">Preguntas Frecuentes</h2>
+        <p class="questions__paragraph">
+          Create unique graphics for social media posts, landing pages and
+          branding in a few clicks
+        </p>
+        <section class="questions__container">
+          <article class="questions__padding">
+            <div class="questions__answer">
+              <h3 class="questions__title">
+                Deja tu Pregunta
+                <span class="questions__arrow"
+                  ><img src="./images/arrow.svg" class="questions__img"
+                /></span>
+              </h3>
+              <p class="questions__show">
+                The standard chunk of Lorem Ipsum used since the 1500s is
+                reproduced below for those interested. Sections 1.10.32 and
+                1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
+                reproduced in their exact original form, accompanied Es un hecho
+                establecido hace demasiado tiempo que un lector se distraerá con
+                el contenido del texto de un sitio mientras que mira su diseño.
+              </p>
+            </div>
+          </article>
+
+          <article class="questions__padding">
+            <div class="questions__answer">
+              <h3 class="questions__title">
+                Deja tu Pregunta
+                <span class="questions__arrow"
+                  ><img src="./images/arrow.svg" class="questions__img"
+                /></span>
+              </h3>
+              <p class="questions__show">
+                The standard chunk of Lorem Ipsum used since the 1500s is
+                reproduced below for those interested. Sections 1.10.32 and
+                1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
+                reproduced in their exact original form, accompanied Es un hecho
+                establecido hace demasiado tiempo que un lector se distraerá con
+                el contenido del texto de un sitio mientras que mira su diseño.
+              </p>
+            </div>
+          </article>
+
+          <article class="questions__padding">
+            <div class="questions__answer">
+              <h3 class="questions__title">
+                Deja tu Pregunta
+                <span class="questions__arrow"
+                  ><img src="./images/arrow.svg" class="questions__img"
+                /></span>
+              </h3>
+              <p class="questions__show">
+                The standard chunk of Lorem Ipsum used since the 1500s is
+                reproduced below for those interested. Sections 1.10.32 and
+                1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
+                reproduced in their exact original form, accompanied Es un hecho
+                establecido hace demasiado tiempo que un lector se distraerá con
+                el contenido del texto de un sitio mientras que mira su diseño.
+              </p>
+            </div>
+          </article>
+        </section>
+
+        <!----APRENDER AMAS-->
+        <section class="question__offer">
+          <h2 class="subtitle">Estas Listo para Aprender ?</h2>
+          <p class="questions__copy">
+            Lorem Ipsum es simplemente el texto de relleno de las imprentas y
+            archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar
+            de las industrias desde el año 1500, cuando un impresor (N. del T.
+            persona que se dedica a la imprenta) desconocido usó una galería de
+            textos y los mezcló
+          </p>
+          <a href="" class="cta">Ver mas</a>
+        </section>
+      </section>
+    </main>
+
+    <!--FOOTER-->
+    <footer class="footer">
+      <section class="footer_container container">
+        <nav class="nav nav--footer">
+          <h2 class="footer__title">Santiago Ramos</h2>
+          <ul class="nav__link nav__link--footer">
+            <li class="nav__items">
+              <a href="" class="nav__links">Inicio</a>
+            </li>
+            <li class="nav__items">
+              <a href="" class="nav__links">Acerca de</a>
+            </li>
+            <li class="nav__items">
+              <a href="" class="nav__links">Contacto</a>
+            </li>
+            <li class="nav__items">
+              <a href="" class="nav__links">Blog</a>
+            </li>
+          </ul>
+        </nav>
+        <form class="footer__form">
+          <h2 class="footer_newsletter">Subscribete a noticias</h2>
+          <div class="footer__inputs">
+            <input type="email" placeholder="Email" class="footer__input" />
+            <input type="submit" value="Registrate" class="footer__submit" />
+          </div>
+        </form>
+      </section>
+      <section class="footer__copy container">
+        <div class="footer__social">
+          <a href="" class="footer__icons">
+            <img src="./images/facebook.svg" class="footer_img" />
+            <img src="./images/twitter.svg" class="footer_img" />
+            <img src="./images/youtube.svg" class="footer_img" />
+          </a>
+        </div>
+        <h3 class="footer__copyright">
+          Derechos reservados &copy; Santiago Ramos
+        </h3>
+      </section>
+    </footer>
+
+    <script src="./js/slider.js"></script>
+    <script src="./js/questions.js"></script>
+    <script src="./js/menu.js"></script>
+  </body>
 </html>
