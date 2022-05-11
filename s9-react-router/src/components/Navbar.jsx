@@ -1,11 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { NavLink, useHistory } from 'react-router-dom'
+import { AuthContext } from '../context/AuthContext';
+import { authTypes } from '../types/authTypes';
+
+
+
 
 const Navbar = () => {
     const history = useHistory();
+    const {dispatch} = useContext(AuthContext);
     const handleLogout = () =>{
+        dispatch({type: authTypes.logout})
         history.replace("/login")
     };
+    
+    
+    
+    
+    
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
@@ -18,24 +30,17 @@ const Navbar = () => {
                 <li className="nav-item">
                 <NavLink className="nav-link" activeClassName='active' aria-current="page" to="/xiaomi">Xiaomi</NavLink>
                 </li>
+                <li className="nav-item">
+                <NavLink className="nav-link" activeClassName='active' aria-current="page" to="/search">Buscar</NavLink>
+                </li>
             </ul>
-            <form className="d-flex">
-                <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Buscar"
-                aria-label="Search"
-                />
-                <button className="btn btn-outline-success" type="submit">
-                Buscar
-                </button>
-            </form>
-            
+
             <button className="btn btn-outline-danger" type="submit" onClick={handleLogout}>Salir</button>
             </div>
         </div>
+      
     </nav>
-
+    
   )
 }
 
