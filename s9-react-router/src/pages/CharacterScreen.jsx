@@ -1,13 +1,14 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { Characters } from '../models/Characters';
 
-const CharacterScreen = ({history}) => {
+const CharacterScreen = ({}) => {
+    const navigate = useNavigate();
     const {id} = useParams();
     const {type, name, description} = Characters.find(character=> character.id ===id);
     const path = `/assets/${type}-${id}.jpg`;
     const handleBack =() =>{
-        history.goBack()
+        navigate(-1)
     };
 
   return (

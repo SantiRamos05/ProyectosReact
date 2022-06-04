@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { NavLink, useHistory } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../context/AuthContext';
 import { authTypes } from '../types/authTypes';
 
@@ -7,11 +7,11 @@ import { authTypes } from '../types/authTypes';
 
 
 const Navbar = () => {
-    const history = useHistory();
+    const navigate = useNavigate;
     const {dispatch} = useContext(AuthContext);
     const handleLogout = () =>{
         dispatch({type: authTypes.logout})
-        history.replace("/login")
+        navigate("/login")
     };
     
     
@@ -25,13 +25,13 @@ const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                <NavLink className="nav-link" activeClassName='active' aria-current="page" to="/iphone">Iphone</NavLink>
+                <NavLink className={ (isActive) => `nav-link ${isActive ? 'active text-white' : ''}`} aria-current="page" to="/iphone">Iphone</NavLink>
                 </li>
                 <li className="nav-item">
-                <NavLink className="nav-link" activeClassName='active' aria-current="page" to="/xiaomi">Xiaomi</NavLink>
+                <NavLink className={ (isActive) => `nav-link ${isActive ? 'active text-white' : ''}`} aria-current="page" to="/xiaomi">Xiaomi</NavLink>
                 </li>
                 <li className="nav-item">
-                <NavLink className="nav-link" activeClassName='active' aria-current="page" to="/search">Buscar</NavLink>
+                <NavLink className={ (isActive) => `nav-link ${isActive ? 'active text-white' : ''}`} aria-current="page" to="/search">Buscar</NavLink>
                 </li>
             </ul>
 

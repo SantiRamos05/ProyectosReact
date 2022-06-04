@@ -1,5 +1,5 @@
 import React, {lazy, Suspense} from 'react'
-import { Redirect, Route, Switch } from 'react-router-dom'
+import { Navigate, Route, Routes  } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 //import CharacterScreen from '../pages/CharacterScreen'
 //import IphoneScreen from '../pages/IphoneScreen'
@@ -21,13 +21,13 @@ const AppRouter = () => {
         <span class="visually-hidden">Loading...</span>
       </div>
     </div>}>
-    <Switch>
-        <Route exact path="/iphone" component={IphoneScreen} />
-        <Route exact path="/xiaomi" component={XiaomiScreen}/>
-        <Route exact path="/search" component={SearchScreen}/>
-        <Route exact path="/character/:id" component={CharacterScreen}/>
-        <Redirect to="/login" />
-    </Switch>
+    <Routes>
+        <Route end path="/xiaomi" element={<XiaomiScreen />}/>
+        <Route end path="/iphone" element={<IphoneScreen />} />
+        <Route end path="/search" element={<SearchScreen />}/>
+        <Route end path="/character/:id" element={<CharacterScreen />}/>
+        <Route path='*' element={<Navigate to="/iphone" />}/>
+    </Routes>
     </Suspense>
     </>
   )
