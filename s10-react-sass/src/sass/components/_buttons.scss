@@ -1,0 +1,16 @@
+.btn{
+    background-color: $primary;
+    color: $secondary;
+    font-size: 1rem;
+    border-radius: 15px;
+    & .btn-primary{
+        background-color: darken($color: $primary, $amount: 10);
+    }
+
+    &:hover{
+        cursor: pointer;
+        background-color: darken($color: $secondary, $amount: 2);
+        color: white;
+    }
+
+}
