@@ -1,8 +1,17 @@
 import React from 'react'
 import GoogleButton from 'react-google-button'
+import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { googleLogin } from '../actions/auth'
 
 const LoginScreen = () => {
+
+    const dispatch = useDispatch();
+
+    const handleGoogleLogin = () =>{
+        dispatch(googleLogin("121212", "Pedro"));
+    };
+
   return (
     <div className='container'>
         <h3>Login</h3>
@@ -12,23 +21,23 @@ const LoginScreen = () => {
                     <div className="input-field col s6">
                     <i className="material-icons prefix">email</i>
                     <input id="email" type="email" className="validate" />
-                    <label for="email">Email</label>
+                    <label htmlFor="email">Email</label>
                     </div>
                     <div className="input-field col s6">
                     <i className="material-icons prefix">vpn_key</i>
                     <input id="vpn_key" type="password" className="validate" />
-                    <label for="vpn_key" >Password</label>
+                    <label htmlFor="vpn_key" >Password</label>
                     </div>
                 </div>
             </form>
             <div className='row'>
                 <div className='col s6'>
-                    <button class="btn waves-effect waves-light pink" type="submit" name="action">Ingresar
-                    <i class="material-icons right">account_circle</i>
+                    <button className="btn waves-effect waves-light pink" type="submit" name="action">Ingresar
+                    <i className="material-icons right">account_circle</i>
                     </button>
                 </div>
                 <div className='col s6'>
-                <GoogleButton onClick={() =>console.log("googlre")} />
+                <GoogleButton onClick={handleGoogleLogin} />
                 </div>
                 <Link to="/register">Registrate</Link>
             </div>
