@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import AuthProvidae from '../components/AuthProvidae'
 import { existsUsername, updateUser } from '../firebase/firebase';
+import style from '../css/ChooseUsername.module.css'
 
 const ChooseUsernameView = () => {
   const navigate = useNavigate();
@@ -41,22 +42,22 @@ const ChooseUsernameView = () => {
 
   if(state === 3 || state === 5){
     return(
-    <div>
+    <div className={style.chooseUsernameContainer}>
       <h1>Bienvenido{currentUser.displayName}</h1>
       <p>Elige un nombre de usuario</p>
       {state === 5? <p>El usuario ya existe</p>: ""}
       <div>
-        <input type="text" onChange={handleInputUsername}/>
+        <input className='input' type="text" onChange={handleInputUsername}/>
       </div>
       <div>
-        <button onClick={handleContinue}>Continue</button>
+        <button className='btn' onClick={handleContinue}>Continue</button>
       </div>
     </div>
   )}
 
   if(state === 6){
     return(
-      <div>
+      <div className={style.chooseUsernameContainer}>
         <h1>Estas registrado ya puedes ir al dashboard</h1>
         <Link to="/dashboard">Continuar</Link>
       </div>

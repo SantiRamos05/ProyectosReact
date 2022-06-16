@@ -5,6 +5,7 @@ import { useEffect } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import AuthProvidae from '../components/AuthProvidae'
 import { auth, userExists } from '../firebase/firebase'
+import style from '../css/LoginView.module.css'
 
 const LoginView = () => {
   const navigate = useNavigate();
@@ -41,7 +42,10 @@ const LoginView = () => {
   
   if (state === 4){
     return (
-      <div><button onClick={handleOnClick}>Login con Google</button></div>
+      <div className={style.loginView}>
+        <div><h1>Link Tree</h1></div>
+        <button className={style.provider} onClick={handleOnClick}>Login con Google</button>
+      </div>
     )
   }
   

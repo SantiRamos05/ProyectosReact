@@ -72,3 +72,73 @@ export async function insertNewLink(link){
         console.error(error)
     }
 }
+
+export async function getLinks(uid){
+    const links = []
+    try {
+        const collectionRef = collection(db, 'links');
+        const q = query(collectionRef, where('uid', '==', uid));
+        const querySnapshot = await getDocs(q);
+        querySnapshot.forEach(doc => {
+            const link = {...doc.data()};
+            link.docId = doc.id;
+            links.push(link)
+        });
+        return links;
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+export async function updateLink(docId, link){
+    try {
+        const docRef = doc(db, 'links', docId);
+        const res = await setDoc(docRef, link);
+        return res;
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+export async function deleteLink(docId){
+    try {
+        const docRef = doc(db, 'links', docId);
+        const res = await deleteDoc(docRef);
+        return res;
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+export async function setUserProfilePhoto(uid, file){
+    try {
+        const imageRef = ref(storage, `images/${uid}`);
+        const resUpload = await uploadBytes(imageRef, file);
+        return resUpload
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+export async function getProfilePhotoUrl(profilePicture){
+    try {
+        const imageRef = ref(storage, profilePicture);
+        const url = await getDownloadURL(imageRef);
+        return url
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+export async function getUserProfileInfo(uid){
+    const profileInfo = await getUserInfo(uid);
+    const linksInfo = await getLinks(uid);
+    return{
+        profileInfo: profileInfo,
+        linksInfo: linksInfo,
+    }
+}
+
+export async function logout(){
+    await auth.signOut();
+}
