@@ -5,13 +5,17 @@ import Fiverr from "../../img/fiverr.png";
 import Amazon from "../../img/amazon.png";
 import Shopify from "../../img/Shopify.png";
 import Facebook from "../../img/Facebook.png";
+import { useContext } from 'react';
+import { themeContext } from '../../Context';
 
 const Works = () => {
+    const theme = useContext(themeContext);
+    const darkMode = theme.state.darkMode;
   return (
     <div className="works">
         {/* Left */}
         <div className='awesome'>
-            <span>Trabajos Desarrollados</span>
+            <span style={{color: darkMode? 'white' : ''}}>Trabajos Desarrollados</span>
             <span>Clientes</span>
             <spane>
             Lorem ispum is simpley dummy text of printing of printing Lorem
