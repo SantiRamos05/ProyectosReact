@@ -4,13 +4,18 @@ import HeartEmoji from "../../img/heartemoji.png";
 import Glasses from "../../img/glasses.png";
 import Humble from "../../img/humble.png";
 import Card from '../Card/Card';
+import { useContext } from 'react';
+import { themeContext } from '../../Context';
 
 const Services = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
+
   return (
     <div className="services">
         {/* Left */}
         <div className='awesome'>
-        <span>Increibles</span>
+        <span style={{color: darkMode? 'white' : ''}}>Increibles</span>
         <span>Servicios</span>
         <spane>
           Lorem ispum is simpley dummy text of printing of printing Lorem
