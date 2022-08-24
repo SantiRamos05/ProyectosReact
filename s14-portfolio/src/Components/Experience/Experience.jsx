@@ -7,7 +7,7 @@ const Experience = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
   return (
-    <div className="expereince">
+    <div className="expereince" id='Experience'>
         <div className="achievement">
             <div className="circle">+2</div>
             <span style={{color: darkMode? 'white' : ''}}>Años</span>
